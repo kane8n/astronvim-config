@@ -10,11 +10,14 @@ return {
         },
       },
       autocmds = {
-        terminal_settings = {
+        neotree_autostart = {
           {
             event = "VimEnter",
+            desc = "Open Neo-tree on startup",
             callback = function()
-              vim.cmd "Neotree toggle"
+              -- gh-dashなどから --cmd で無効化できるようにする
+              if vim.g.no_neotree then return end
+              vim.cmd "Neotree show"
             end,
           },
         },
