@@ -4,6 +4,9 @@ return {
     opts = {
       style = {
         transparent = true,
+        inactive = false,
+        float = false,
+        neotree = false,
       },
     },
   },
